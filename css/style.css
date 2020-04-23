@@ -1,0 +1,44 @@
+/*Definimos a la raiz del documento variables que usaremos para
+los estilos*/
+:root{
+    --rojo: #e50914;
+    --fondo:#141414;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--fondo);
+    /* font-family: 'Bebas Neue', cursive; */
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width: 90%;
+    margin: auto;  /*Alineamos horizontalmente el contenedor al centro de su padre.*/
+}
+header {
+    padding: 30px 0;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;  /*Separamos a los costados en logo y el nav*/
+    align-items: center;  /*Alineamos verticalmente los elementos*/
+}
+header .logo{
+    font-family: 'Bebas Neue', cursive;
+   font-weight: normal;  /*Quitamos las negritas que viene por defecto en la etiqueta h2*/
+   color:var(--rojo);
+}
+header nav a{
+    color:#aaa;
+    text-decoration: none;  /*Quitamos los subrayados*/
+    margin-right: 20px;
+}
+header nav a:hover,
+header nav a.active{
+    color: #fff;
+}

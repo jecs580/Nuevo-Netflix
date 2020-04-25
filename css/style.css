@@ -30,8 +30,8 @@ header .container{
 }
 header .logo{
     font-family: 'Bebas Neue', cursive;
-   font-weight: normal;  /*Quitamos las negritas que viene por defecto en la etiqueta h2*/
-   color:var(--rojo);
+    font-weight: normal;  /*Quitamos las negritas que viene por defecto en la etiqueta h2*/
+    color:var(--rojo);
 }
 header nav a{
     color:#aaa;
@@ -41,4 +41,57 @@ header nav a{
 header nav a:hover,
 header nav a.active{
     color: #fff;
+}
+
+/* MAIN MOVIE */
+.main-movie {
+    font-size: 16px;  /*1em = 16px*/
+    min-height: 40.62em;
+    color:#fff;
+    background: linear-gradient(rgba(0,0,0, .5) 0% , rgba(0,0,0, .5) 100%),url('../img/backdrop.jpg');
+    background-position: center center;   /*Posicionamos el backgroud al centro verticalmente y horizontalmente*/
+    background-size: cover;  /*Especificamos que la imagen ocupe todo el espacio de su contenedor*/
+    background-repeat: no-repeat; /*Hacemos q la imagen no se repita*/
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-movie .container{
+    margin: 0 auto;  /*Quitamos el margen auto y colocamos margin 0 para el lado vertical y para el
+    horizontal auto para que este centrado*/
+    margin-bottom: 6.25em;
+}
+.main-movie .title{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+.main-movie .description{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+.main-movie .button{
+    background: rgba(0,0,0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 1.25em;
+    transition: .3s ease all;  /*Podemos manipular las propiedades que queremos darle al pasar con el mouse (atributo de una etiqueta html,
+    duracion) podemos colocar para mas de una atributo separandolo por comas*/
+    /* ease: es una funcion de curva de velocidad con inicio lento, luego rápido, luego finaliza lentamente
+    all: signnifica que queremos que se aplique a todas los atributos de la etiqueta.*/
+    font-size: 1.12em;
+}
+.main-movie .button:hover{
+    background: #fff;
+    color: #000;
+}
+.main-movie .button i{
+    margin-right: 1.25em;
 }

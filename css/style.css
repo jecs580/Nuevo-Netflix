@@ -95,3 +95,22 @@ header nav a.active{
 .main-movie .button i{
     margin-right: 1.25em;
 }
+
+
+/* Media Queries */
+@media(max-width:800px){
+    header .logo{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    header .container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-movie{
+        font-size: 14px;
+    }
+    .main-movie .description{
+        max-width: 100%;
+    }
+}

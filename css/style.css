@@ -196,4 +196,21 @@ header nav a.active{
     .main-movie .description{
         max-width: 100%;
     }
+
+    .recommended-movies .container-carrusel{
+        overflow: visible;
+    }
+    .recommended-movies .container-carrusel .carrusel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .recommended-movies .indicators{
+        display: none;
+    }
+    .recommended-movies .indicators,
+    .recommended-movies .container-main .arrow-left,
+    .recommended-movies .container-main .arrow-right{
+        display: none;
+    }
 }

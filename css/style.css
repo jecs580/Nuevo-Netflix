@@ -96,7 +96,90 @@ header nav a.active{
     margin-right: 1.25em;
 }
 
+/* Container title and Controls */
+.container-title-controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.container-title-controls h3{
+    color: #fff;
+    font-size: 30px;
+}
+.container-title-controls .indicators button{
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+.container-title-controls .indicators button:hover,
+.container-title-controls .indicators button.active{
+    background: red;
+}
 
+
+/* Main Container and Arrows */
+.recomended-movies{
+    margin-bottom: 70px;
+}
+.recommended-movies .container-main{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.recommended-movies .container-main .arrow-left,
+.recommended-movies .container-main .arrow-right{
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0, .3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50%-25%);
+    line-height: 50px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2 ease all;
+}
+.recommended-movies .container-main .arrow-left{
+    left: 0;
+}
+.recommended-movies .container-main .arrow-right{
+    right: 0;
+}
+.recommended-movies .container-main .arrow-left:hover,
+.recommended-movies .container-main .arrow-right:hover{
+    background: rgba(0,0,0, .9);
+}
+
+/* Carrusel */
+.recommended-movies .container-carrusel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;  /*Especificamos que todo lo q salga del 100% que lo mantenga oculto*/
+    scroll-behavior: smooth;  /*Establecemos que el scroll que se afectuara en las imagenes del carrusel sea mas lento y suave.*/
+}
+.recommended-movies .container-carrusel .carrusel{
+    display: flex;
+    flex-wrap: nowrap;  /*Especificamos q los elementos hijos(las imagenes) se muestren en una sola linea y no multiples.*/
+}
+.recommended-movies .container-carrusel .carrusel .movie{
+    min-width: 20%;  /*Con esta linea especificamos que el tamaño de cada caja de imagen se reduzca minimamente al 20%*/
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgb(0,0,0, .3); /* offset-x | offset-y | blur-radius(difuninado 20px:alto 0px:bajo ) | color */
+}
+.recommended-movies .container-carrusel .carrusel .movie img{
+    width: 100%;  /*Especificamos que las imagenes tegan un ancho completo de su padre. Esto ocapcionara que todas las imagenes que tengamos se muestren reduciendo su tamaño para entrar todas.*/
+    vertical-align: top;
+}
+.recommended-movies .container-carrusel .carrusel .movie.hover{
+    transform: scale(1.2);  /*Cambiamos el tamaño de la caja*/
+    transform-origin: center;  /*Declaramos que el aumento del tamaño sea por el centro.*/
+}
 /* Media Queries */
 @media(max-width:800px){
     header .logo{

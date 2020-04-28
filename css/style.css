@@ -1,14 +1,14 @@
 /*Definimos a la raiz del documento variables que usaremos para
 los estilos*/
-:root{
-    --rojo: #e50914;
-    --fondo:#141414;
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
 }
 
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body{
@@ -32,6 +32,7 @@ header .logo{
     font-family: 'Bebas Neue', cursive;
     font-weight: normal;  /*Quitamos las negritas que viene por defecto en la etiqueta h2*/
     color:var(--rojo);
+    font-size: 40px;
 }
 header nav a{
     color:#aaa;
@@ -121,7 +122,7 @@ header nav a.active{
 
 
 /* Main Container and Arrows */
-.recomended-movies{
+.recommended-movies{
     margin-bottom: 70px;
 }
 .recommended-movies .container-main{
@@ -130,29 +131,29 @@ header nav a.active{
     position: relative;
 }
 
-.recommended-movies .container-main .arrow-left,
-.recommended-movies .container-main .arrow-right{
+.recommended-movies .container-main .left-arrow,
+.recommended-movies .container-main .right-arrow{
     position: absolute;
     border: none;
     background: rgba(0,0,0, .3);
     font-size: 40px;
     height: 50%;
     top: calc(50%-25%);
-    line-height: 50px;
+    line-height: 40px;
     width: 50px;
     color: #fff;
     cursor: pointer;
     z-index: 500;
     transition: .2 ease all;
 }
-.recommended-movies .container-main .arrow-left{
+.recommended-movies .container-main .left-arrow{
     left: 0;
 }
-.recommended-movies .container-main .arrow-right{
+.recommended-movies .container-main .right-arrow{
     right: 0;
 }
-.recommended-movies .container-main .arrow-left:hover,
-.recommended-movies .container-main .arrow-right:hover{
+.recommended-movies .container-main .right-arrow:hover,
+.recommended-movies .container-main .left-arrow:hover{
     background: rgba(0,0,0, .9);
 }
 
@@ -209,8 +210,8 @@ header nav a.active{
         display: none;
     }
     .recommended-movies .indicators,
-    .recommended-movies .container-main .arrow-left,
-    .recommended-movies .container-main .arrow-right{
+    .recommended-movies .container-main .left-arrow,
+    .recommended-movies .container-main .right-arrow{
         display: none;
     }
 }

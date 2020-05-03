@@ -2,6 +2,18 @@ const carrusel=document.querySelector('.container-carrusel');
 const movie= document.querySelectorAll('.movie');  
 /*Con el metodo querySelectorAll obtenemos un array con cada elemento que tuviera la clase .movie */
 
+async function datos(){
+    res = await fetch('http://www.omdbapi.com/?i=tt3896198&apikey=a0a6b836&s=joker');
+    return res.json();
+}
+const data=datos().then(
+    data=> console.log(data.Search)
+).catch(
+    error=> console.log("Error",error)
+);
+
+
+
 const rightArrow=document.getElementById('right-arrow');
 const leftArrow=document.getElementById('left-arrow');
 
